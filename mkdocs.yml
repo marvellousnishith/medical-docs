@@ -1,0 +1,141 @@
+site_name: My Docs
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  icon:
+    #    admonition:
+    #      note: octicons/tag-16
+    #      abstract: octicons/checklist-16
+    #      info: octicons/info-16
+    #      tip: octicons/squirrel-16
+    #      success: octicons/check-16
+    #      question: octicons/question-16
+    #      warning: octicons/alert-16
+    #      failure: octicons/x-circle-16
+    #      danger: octicons/zap-16
+    #      bug: octicons/bug-16
+    #      example: octicons/beaker-16
+    #      quote: octicons/quote-16
+    #    admonition:
+    note: fontawesome/solid/note-sticky
+    abstract: fontawesome/solid/book
+    info: fontawesome/solid/circle-info
+    tip: fontawesome/solid/bullhorn
+    success: fontawesome/solid/check
+    question: fontawesome/solid/circle-question
+    warning: fontawesome/solid/triangle-exclamation
+    failure: fontawesome/solid/bomb
+    danger: fontawesome/solid/skull
+    bug: fontawesome/solid/robot
+    example: fontawesome/solid/flask
+    quote: fontawesome/solid/quote-left
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.footer
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - content.tabs.link
+    - content.code.copy
+    - content.tooltips
+  user_color_mode_toggle: true
+  color_mode: dark
+  hljs_languages:
+    - yaml
+    - rust
+    - python
+    - go
+    - java
+    - bash
+    - javascript
+    - markdown
+    - makefile
+    - shell
+    - json
+    - xml
+    - sql
+    - properties
+site_author: Nishith Shah (nisheeth.shah@outlook.com)
+copyright: Copyright &copy; 2024 Nishith Shah
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/marvellousnishith/
+      name: LinkedIn
+    - icon: fontawesome/brands/github
+      link: https://github.com/marvellousnishith
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/nisheethshah/
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<nisheeth.shah@outlook.com>
+markdown_extensions:
+  - pymdownx.mark
+  - md_in_html
+  - abbr
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: "#"
+  - pymdownx.highlight:
+      use_pygments: true
+  #      anchor_linenums: true
+  #      linenums_style: pymdownx-inline
+      linenums: true
+  #      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+site_description: This is for Nishith's personal notes.
+plugins: 
+  - search
+  # - info
+  - with-pdf:
+      cover_title: Medical Record Management
+      cover_subtitle: Revolutionising the health
+  #     cover_logo: assets/media/ricoh-banner.svg
+      output_path: ../medical-record-management.pdf
+  #     heading_shift: false
+  #     toc_level: 3
+  #     back_cover: true
+  #     excludes_children:
+  #       - architecture
+  #     exclude_pages:
+  #       - 'discovery/'
+  #       - 'architecture/WIP/'
+  #       - 'architecture/reference/'
+  #       - 'test/'
+  #       - 'index/'
+  - print-site:
+      add_to_navigation: true
+      path_to_pdf: "assets"
+  # - redirects:
+  #     redirect_maps:
+  #       index.mkd: architecture/solution-design-document.md
